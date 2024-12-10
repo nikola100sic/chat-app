@@ -4,8 +4,11 @@ import lombok.*;
 
 @Builder
 public class ChatMessage {
+    
     private String sender;
+
     private String content;
+
     private String type;
 
     public ChatMessage() {
