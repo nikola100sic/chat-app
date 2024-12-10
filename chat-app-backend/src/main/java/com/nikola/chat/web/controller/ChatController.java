@@ -1,4 +1,4 @@
-package com.nikola.chat.controller;
+package com.nikola.chat.web.controller;
 
 import com.nikola.chat.model.ChatMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -12,13 +12,13 @@ public class ChatController {
 
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
-    public ChatMessage sendMesage(@Payload ChatMessage chatMesage){
+    public ChatMessage sendMesage(@Payload ChatMessage chatMesage) {
         return chatMesage;
     }
 
     @MessageMapping("/chat.addUser")
     @SendTo("/topic/public")
-    public ChatMessage addUser(@Payload  ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor){
+    public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
 
         // add username in web socket session
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
