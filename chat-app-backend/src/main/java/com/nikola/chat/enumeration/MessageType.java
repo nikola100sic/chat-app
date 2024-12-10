@@ -1,4 +1,4 @@
-package com.nikola.chat.chat;
+package com.nikola.chat.enumeration;
 
 public enum MessageType {
 

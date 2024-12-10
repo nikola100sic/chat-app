@@ -1,5 +1,6 @@
-package com.nikola.chat.chat;
+package com.nikola.chat.controller;
 
+import com.nikola.chat.model.ChatMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;

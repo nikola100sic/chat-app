@@ -1,7 +1,7 @@
 package com.nikola.chat.config;
 
-import com.nikola.chat.chat.ChatMessage;
-import com.nikola.chat.chat.MessageType;
+import com.nikola.chat.model.ChatMessage;
+import com.nikola.chat.enumeration.MessageType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.event.EventListener;
