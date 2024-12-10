@@ -12,10 +12,11 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 @Component
 public class WebSocketEventListener {
+
     private static final Logger log = LoggerFactory.getLogger(WebSocketEventListener.class);
+
     private final SimpMessageSendingOperations messageTemplate;
 
-    // Ručno dodati konstruktor
     public WebSocketEventListener(SimpMessageSendingOperations messageTemplate) {
         this.messageTemplate = messageTemplate;
     }
@@ -29,8 +30,7 @@ public class WebSocketEventListener {
             ChatMessage chatMessage = new ChatMessage();
             chatMessage.setType(String.valueOf(MessageType.LEAVE));
             chatMessage.setSender(username);
-
-
+            
             messageTemplate.convertAndSend("/topic/public", chatMessage);
         }
     }
