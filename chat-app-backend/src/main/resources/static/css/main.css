@@ -45,6 +45,8 @@ body {
 input {
     padding-left: 10px;
     outline: none;
+    height:50px;
+    width: 100%
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -82,13 +84,14 @@ button.default {
 }
 
 button.primary {
+
     background-color: #6db33f;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
     color: #fff;
 }
 
 button.accent {
-    background-color: #6db33f;
+    background-color: #0099ff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
     color: #fff;
 }
@@ -212,10 +215,31 @@ button.accent {
     width: calc(100% - 85px);
 }
 
+#chat-page ul li.left-message {
+    text-align: left;
+    background-color: #e9f5ff;
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top:10px;
+    border-radius: 10px 10px 10px 0;
+    max-width: 60%;
+}
+
+#chat-page ul li.right-message {
+    text-align: right;
+    background-color: #d1ffd1;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 10px 10px 0 10px;
+    max-width: 60%;
+}
+
+
 #messageForm .input-group button {
     float: left;
     width: 80px;
-    height: 38px;
+    height: 50px;
     margin-left: 5px;
 }
 
